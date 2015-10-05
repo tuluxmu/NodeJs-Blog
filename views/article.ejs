@@ -1,0 +1,22 @@
+    <%include header %>
+    <%include nav%>
+    <div class="jumbotron">
+    <span>
+        <a class="edit" href="/edit/<%= post.name %>/<%= post.time.day %>/<%= post.title %>">编辑</a>
+    </span>|
+    <span>
+        <a class="edit" href="/remove/<%= post.name %>/<%= post.time.day %>/<%= post.title %>">删除</a>
+    </span>
+    <h3> <%= post.title %></h3>
+     <div >作者：<%= post.name %></div>
+    标签：
+    <% post.tags.forEach(function(item,index){ %>
+    <span> <%= item %> </span>
+    <% }) %>
+    <div>内容：<%- post.post %></div>
+  
+</div>
+    
+   
+    <% include comment %>
+    <%include foot%>

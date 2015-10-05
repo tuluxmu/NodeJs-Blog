@@ -1,0 +1,14 @@
+.reg-form>div{
+	width:200px;
+	padding: 10px 0;
+}
+.reg-form{
+	width:200px;
+	margin:0 auto;
+}
+a.login-github{
+	margin:0 auto;
+	display: block;
+	width:200px;
+	padding-top: 10px;
+}

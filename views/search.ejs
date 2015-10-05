@@ -1,0 +1,13 @@
+<%- include header %>
+<%- include nav %>
+<ul class="archive">
+<% var lastYear = 0 %>
+<% posts.forEach(function (post, index) { %>
+  <% if(lastYear != post.time.year) { %>
+    <li><h3><%= post.time.year %></h3></li>
+  <% lastYear = post.time.year } %>
+    <li>时间：<time><%= post.time.day %></time></li>
+    <li>标题：<a href="/u/<%= post.name %>/<%= post.time.day %>/<%= post.title %>"><%= post.title %></a></li>
+<% }) %>
+</ul>
+<%- include foot %>

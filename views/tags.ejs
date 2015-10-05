@@ -1,0 +1,8 @@
+<ul class="btn-group-vertical tags" role="group">
+<li >标签</li>
+<% tags.forEach(function (tag, index) { %>
+  <li class="tag">
+  <a href="/tags/<%= tag %>"><%= tag %></a>
+  </li>
+<% }) %>
+</ul>

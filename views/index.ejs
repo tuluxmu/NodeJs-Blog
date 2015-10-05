@@ -1,0 +1,36 @@
+	<%include header %>
+    <%include nav%>
+    <ul class="essay_list">
+	 <% posts.forEach(function (post, index) { %>
+	  		<li>
+	  		<p>
+	  			<h3>
+		  			<span class="label label-default">
+		  			标题：
+			  			<a href="/u/<%= post.name %>/<%= post.time.day %>/<%= post.title %>">
+		  		 		<%= post.title %>
+		  		 		</a>
+		  			</span>
+	  			</h3>
+	  			标签：
+	  			<% post.tags.forEach(function(item,index){ %>
+					<a class="tags" href="/tags/<%=item %>"><%=item %></a>
+	  			<% }) %>
+	  		</p>
+		  <p class="info">
+		    作者：
+		    <a href="/u/<%= post.name %>">
+		    	<%= post.name %>
+		    </a> 
+		  </p>
+		  <p>
+		  	内容：<%- post.post %>
+		  </p>
+		  </li>
+		  
+  <% }) %>
+  <% include page %> 
+  </ul>
+  
+  <% include tags %>
+  <%include foot%>
